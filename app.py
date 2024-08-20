@@ -44,7 +44,7 @@ def prediction(image_path):
 # Define routes for the website
 @app.route('/')
 def home():
-    return render_template('Home.html')
+    return render_template('index.html')
 
 @app.route('/detection', methods=['GET', 'POST'])
 def detection():
