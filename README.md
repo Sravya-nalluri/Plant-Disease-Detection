@@ -1,47 +1,90 @@
-# ⭐Plant-Disease-Detection
-* Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using convolutional Neural Network for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset. Dataset Link is in My Blog Section.
+Plant Disease Detection
+Table of Contents
+Introduction
+Features
+Installation
+Usage
+Project Structure
+Technologies Used
+Contributors
+License
+Introduction
+The Plant Disease Detection project is a web-based application designed to help users detect diseases in plants by uploading images. This application uses a Convolutional Neural Network (CNN) model to classify the disease and provides detailed information on the disease, including preventive measures and supplement recommendations.
 
-## ⭐Run Project in your Machine
-* You must have **Python3.8** installed in your machine.
-* Create a Python Virtual Environment & Activate Virtual Environment [Link](https://docs.python.org/3/tutorial/venv.html)
-* Install all the dependencies using below command
-    `pip install -r requirements.txt`
-* Go to the `Flask Deployed App` folder.
-* Download the pre-trained model file `plant_disease_model_1.pt` from [here](https://drive.google.com/drive/folders/1ewJWAiduGuld_9oGSrTuLumg9y62qS6A?usp=share_link)
-* Add the downloaded file in `Flask Deployed App` folder.
-* Run the Flask app using below command `python3 app.py`
-* You can also use downloaded file in `Model` Section and play with it using Jupyter Notebook.
+Features
+Image Upload: Users can upload an image of a plant leaf to detect any potential disease.
+Disease Detection: The CNN model analyzes the uploaded image and identifies the disease.
+Detailed Information: Users receive a detailed description of the disease, along with preventive measures.
+Supplement Recommendations: The application suggests relevant supplements for disease management and provides a direct link to purchase them online.
+Responsive Design: The application is designed to be responsive, ensuring it works well on both desktop and mobile devices.
+Installation
+To run this project locally, follow these steps:
 
-## ⭐Contribution ( Open Source )
-* This Project is now open source.
-* All the developers who are intrested they can contribute in this project.
-* Yo can make UI better , make Deep learning model more powerful , add informative markdown file in section...
-* If you will change Deep learning make sure you upload updated markdown file (.md) , .pdf and .ipynb in particular section.
-* Make sure your code is working. It will not have any type or error.
-* You have to fork this project then make a pull request after you testing will successful.
-* How to make pull request : https://opensource.com/article/19/7/create-pull-request-github
+Clone the repository:
 
+bash
+Copy code
+git clone https://github.com/yourusername/plant-disease-detection.git
+Navigate to the project directory:
 
-## ⭐Testing Images
+bash
+Copy code
+cd plant-disease-detection
+Install the required dependencies:
 
-* If you do not have leaf images then you can use test images located in test_images folder
-* Each image has its corresponding disease name, so you can verify whether the model is working perfectly or not
+bash
+Copy code
+pip install -r requirements.txt
+Run the Flask application:
 
-## ⭐Blog Link
-<a href="https://medium.com/analytics-vidhya/plant-disease-detection-using-convolutional-neural-networks-and-pytorch-87c00c54c88f" target = "_blank">Plant Disease Detection Using Convolutional Neural Networks with PyTorch</a><br>
+bash
+Copy code
+python app.py
+Access the application:
+Open your web browser and go to http://127.0.0.1:5000.
 
-## ⭐Deployed App
-<a href="https://plant-disease-detection-ai.herokuapp.com/" target = "_blank">Plant-Disease-Detection-AI</a><br>
-
-
+Usage
+Navigate to the "Detection" page.
+Upload an image of a plant leaf using the provided upload button.
+Click the "Submit" button to process the image.
+The application will display the detected disease, a brief description, preventive measures, and supplement recommendations.
+Project Structure
+app.py: The main Flask application file.
+CNN.py: Contains the CNN model architecture and functions.
+templates/: HTML templates for the web pages.
+index.html: Homepage.
+detection.html: Detection page.
+about.html: About page.
+contact.html: Contact page.
+static/: Static files like images, CSS, and JavaScript.
+uploads/: Directory where uploaded images are stored.
+images/: Supplementary images.
+requirements.txt: Lists all Python dependencies.
+disease_info.csv: CSV file containing disease information such as name, description, and prevention.
+supplement_info.csv: CSV file containing supplement information like name, image, and buy link.
+Technologies Used
+Python: Programming language for the backend.
+Flask: Web framework used to build the application.
+PyTorch: Deep learning framework used to implement the CNN model.
+Pandas: Library for data manipulation and analysis.
+HTML/CSS: Markup and styling for the frontend.
+Bootstrap: Frontend framework for responsive design.
+Contributors
+NaluriSravya
+Akula Jahnavi
+License
+This project is licensed under the MIT License - see the LICENSE file for details
 ## ⭐Snippet of Web App :
-#### Main page
-<img src = "demo_images/1.png" > <br>
-#### AI Engine 
-<img src = "demo_images/2.png"> <br>
-#### Results Page 
-<img src = "demo_images/3.png"> <br>
-#### Supplements/Fertilizer  Store
-<img src = "demo_images/4.JPG"> <br>
-#### Contact Us 
-<img src = "demo_images/5.png"> <br><br>
+#### Home page
+<img src = "demo/1.png" > <br>
+#### Detection page
+<img src = "demo/2.png"> <br>
+#### detected image details 
+<img src = "demo/3.png"> <br>
+#### Features
+<img src = "demo/4.JPG"> <br>
+#### About us
+<img src = "demo/5.png"> <br><br>
+#### Contact
+<img src = "demo/6.png"> <br><br>
+
