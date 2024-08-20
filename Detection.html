@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Ensure body and html take up the full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Ensure main content takes up available space */
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            color: rgb(232, 223, 223);
+            background: #5ac08d;
+        }
+
+        .hero h2 {
+            color: black;
+        }
+
+        .hero p {
+            color: rgb(23, 8, 6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d6a4f;
+            color: white;
+        }
+
+        /* Form Styles */
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="file"] {
+            display: block;
+            width: 100%;
+        }
+
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #1b4f3f;
+        }
+
+        /* Results Styles */
+        .result-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .result-container img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .result-container p {
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Plant Disease Detection</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('features') }}">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Detection Form -->
+        <section class="form-container">
+            <h2>Detect Plant Disease</h2>
+            <form action="{{ url_for('detection') }}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="plant_image">Upload an image:</label>
+                    <input type="file" name="plant_image" id="plant_image" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            {% if result %}
+            <div class="result-container">
+                <h3>{{ result['title'] }}</h3>
+                <img src="{{ result['image_url'] }}" alt="Detected Image">
+                <p>{{ result['description'] }}</p>
+                <p style="color: #000905;"><strong style="color: #6ccca1;">Prevention:</strong> {{ result['prevention'] }}</p>
+                <p><b>Supplement Name:</b></p>
+                <p style="color: #08d598;"><strong>{{ result['supplement_name'] }}</strong></p>
+                <a href="{{ result['supplement_buy_link'] }}" class="btn btn-primary">Buy Now</a>
+            </div>
+            {% elif message %}
+            <p class="text-danger">{{ message }}</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Plant Disease Detection | Created by Naluri Sravya & Akula Jahnavi | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
