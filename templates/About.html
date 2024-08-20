@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Plant Disease Detection</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+        }
+
+        header {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar-brand h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        main {
+            flex: 1; /* Allows the main content to expand and push the footer to the bottom */
+        }
+
+        .about-section {
+            padding: 50px 20px;
+        }
+
+        .about-section h2 {
+            color: #2d6a4f;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d6a4f;
+            color: white;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"><h1>Plant Disease Detection</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Welcome to the Plant Disease Detection project. Our mission is to empower farmers and plant enthusiasts with the tools needed to identify plant diseases quickly and accurately. We leverage advanced machine learning algorithms to provide users with reliable disease detection results, helping them to take timely action and ensure the health of their plants.</p>
+                <p>Our system uses a comprehensive database of plant diseases to ensure accurate and reliable results. The application is designed to be user-friendly, allowing users to simply upload an image of their plant and receive instant feedback.</p>
+                <p>We are dedicated to making plant care more accessible and effective through technology. Our team is passionate about creating solutions that enhance the agricultural experience and support sustainable practices.</p>
+                <p>Thank you for visiting our project page. If you have any questions or feedback, feel free to contact us.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plant Disease Detection | Created by Naluri Sravya & Akula Jahnavi | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
