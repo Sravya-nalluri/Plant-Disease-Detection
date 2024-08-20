@@ -82,7 +82,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 #### detected image details 
 <img src = "demo/3.png"> <br>
 #### Features
-<img src = "demo/4.JPG"> <br>
+<img src = "demo/4.png"> <br>
 #### About us
 <img src = "demo/5.png"> <br><br>
 #### Contact
