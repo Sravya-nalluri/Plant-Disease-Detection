@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection - Features</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar-brand h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        .features-section {
+            padding: 50px 20px;
+        }
+
+        .feature-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .feature-card h3 {
+            color: #2d6a4f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d6a4f;
+            color: white;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                margin: 0;
+            }
+
+            .features-section {
+                padding: 30px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            .feature-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"><h1>Plant Disease Detection</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Features.html">Features <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <main>
+            <section class="features-section">
+                <div class="container">
+                    <h2 class="text-center">Key Features</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <h3>Easy Detection</h3>
+                                <p>Upload an image of your plant and get instant results with minimal effort.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <h3>Accurate Results</h3>
+                                <p>Our system uses advanced algorithms to ensure high accuracy in detecting plant diseases.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <h3>Comprehensive Database</h3>
+                                <p>Access a wide range of plant diseases, including rare and common conditions, for better diagnosis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Plant Disease Detection | Created by Naluri Sravya & Akula Jahnavi | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
